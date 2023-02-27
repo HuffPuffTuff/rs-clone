@@ -1,0 +1,14 @@
+.login-container {
+  width: 350px;
+  padding: 10px 40px;
+  background-color: var(--bg-color_100);
+  border: solid 1px rgb(var(--secondary-bg_700));
+
+  @media screen and (max-width: 450px) {
+    width: auto;
+    max-width: 350px;
+    min-width: 270px;
+    background-color: transparent;
+    border: none;
+  }
+}

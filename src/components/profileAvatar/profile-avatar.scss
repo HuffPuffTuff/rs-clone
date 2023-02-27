@@ -1,0 +1,28 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  border: 1px solid rgb(var(--secondary-bg_700));
+  border-radius: 50%;
+  cursor: pointer;
+  
+  @media screen and (max-width: 736px) {
+    width: 77px;
+    height: 77px;
+  }
+}
+
+.avatar__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @media screen and (max-width: 736px) {
+    width: 77px;
+    height: 77px;
+  }
+}

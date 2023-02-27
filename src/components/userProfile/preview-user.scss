@@ -1,0 +1,27 @@
+.recomendations-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.recomendations-user__image-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgb(var(--secondary-bg_700));
+}
+
+.recomendations-user__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.recomendations-user__name {
+  font-weight: 600;
+  word-break: break-all;
+  color: rgb(var(--text-color_500));
+  text-decoration: none;
+}

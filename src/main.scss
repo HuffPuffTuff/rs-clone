@@ -1,0 +1,19 @@
+@import "~normalize.css";
+@import "assets/styles/vendors/vendors";
+@import "assets/styles/components/components";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  background-color: var(--bg-color_500);
+  color: rgb(var(--text-color_500));
+}
+
+.error {
+  color: red;
+}

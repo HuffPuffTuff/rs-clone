@@ -1,0 +1,143 @@
+.login-page__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 108px;
+}
+
+.login-page__image {
+  position: relative;
+  width: 380px;
+  height: 581px;
+  background-image: url('../../public/images/login-bg.png');
+  background-size: 468px 634px;
+  background-position: -46px 0;
+
+  @media screen and (max-width: 875px) {
+    display: none;
+  }
+}
+
+.login-image__item {
+  position: absolute;
+  top: 27px;
+  left: 113px;
+  transition: opacity 1.5s;
+  opacity: 0;
+  z-index: 2;
+}
+
+.login-image__item--slide1 {
+  animation: slide1 20s infinite;
+}
+
+.login-image__item--slide2 {
+  animation: slide2 20s infinite;
+}
+
+.login-image__item--slide3 {
+  animation: slide3 20s infinite;
+}
+
+.login-image__item--slide4 {
+  animation: slide4 20s infinite;
+}
+
+@keyframes slide1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes slide2 {
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes slide3 {
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide4 {
+  0% {
+    opacity: .1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-page__inner {
+  margin-bottom: 10px;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-header__logo {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  filter: var(--icon-filter);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.login-form__field,
+.login-form__action {
+  width: 100%;
+}
+
+.login-form__action {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.login-page__signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-page__footer {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  height: 134px;
+  margin-top: auto;
+  color: rgb(var(--text-color_300));
+}
+
+.rs__image {
+  filter: var(--icon-filter2);
+}

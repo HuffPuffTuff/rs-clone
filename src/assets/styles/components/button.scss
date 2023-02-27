@@ -1,0 +1,67 @@
+.button {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-decoration: none;
+  padding: 7px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(var(--secondary-bg_600));
+  white-space: nowrap;
+  color: rgb(var(--text-color_900));
+  transition: background-color .2s;
+  touch-action: manipulation;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: rgb(var(--secondary-bg_700));
+  }
+
+  &:disabled {
+    opacity: .7;
+    cursor: default;
+  }
+}
+
+.button--primary {
+  background-color: rgb(var(--primary-bg_500));
+  color: rgb(var(--text-color_100));
+
+  &:hover:not(:disabled) {
+    background-color: rgb(var(--primary-bg_700));
+  }
+}
+
+.button--delete {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  -webkit-mask-image: url('../public/images/icons/delete.svg');
+  mask-image: url('../public/images/icons/delete.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  mask-size: 24px 24px;
+  -webkit-mask-position: center;
+  mask-position: center;
+  opacity: .3;
+  background-color: rgb(var(--text-color_500));
+  transition: opacity .3s, background-color .3s;
+
+  &:hover:not(:disabled) {
+    opacity: .7;
+  }
+}
+
+.button--transparent {
+  font-weight: 500;
+  padding: 0;
+  background-color: transparent;
+  transition: color .2s;
+  color: rgb(var(--primary-bg_500));
+
+  &:hover:not(:disabled) {
+    background-color: transparent;
+    color: rgb(var(--primary-bg_600));
+  }
+}

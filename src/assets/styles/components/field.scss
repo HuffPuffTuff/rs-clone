@@ -1,0 +1,50 @@
+.field {
+  font-family: inherit;
+  font-size: 14px;
+  padding-top: 7px;
+  padding-right: 0;
+  padding-bottom: 9px;
+  padding-left: 8px;
+  border: 1px solid rgb(var(--secondary-bg_700));
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: 0;
+  color: rgb(var(--text-color_500));
+  background-color: var(--bg-color_500);
+  transition: border-color .2s;
+
+  &::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(var(--text-color_300));
+  }
+
+  &:focus {
+    border-color: rgb(var(--secondary-bg_800));
+  }
+
+  &:disabled {
+    background-color: rgb(var(--secondary-bg_500));
+    color: rgb(var(--text-color_300));
+    cursor: not-allowed;
+  }
+}
+
+.field--search {
+  font-size: 16px;
+  line-height: 28px;
+  border-radius: 8px;
+  border: none;
+  padding-left: 16px;
+  background-color: var(--bg-color_400);
+
+  &::placeholder {
+    font-size: 16px;
+  }
+}
+
+.field--transparent {
+  border: none;
+  background-color: transparent;
+}

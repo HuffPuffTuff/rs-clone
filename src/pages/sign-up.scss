@@ -1,0 +1,80 @@
+.signup-page__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 450px) {
+    margin-top: 0;
+  }
+}
+
+.signup-page__header {
+  margin-bottom: 12px;
+}
+
+.signup-page__form {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.signup-page__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-header__logo {
+  margin-top: 36px;
+  margin-bottom: 12px;
+  filter: var(--icon-filter);
+}
+
+.signup-header__text {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: rgb(var(--text-color_300));
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.signup-form__field,
+.signup-form__action {
+  width: 100%;
+}
+
+.signup-form__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(var(--text-color_300));
+}
+
+.signup-page__footer {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  height: 134px;
+  margin-top: auto;
+  color: rgb(var(--text-color_300));
+}
+
+.rs__image {
+  filter: var(--icon-filter2);
+}

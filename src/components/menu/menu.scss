@@ -1,0 +1,316 @@
+.main-nav {
+  position: fixed;
+  left: 0;
+  width: 245px;
+  height: 100vh;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  border-right: solid 1px rgb(var(--secondary-bg_700));
+  background-color: var(--bg-color_100);
+  transition: width 0.5s;
+  z-index: 1;
+
+  @media screen and (min-width: 1920px) {
+    width: 335px;
+  } 
+
+  @media screen and (max-width: 1263px) {
+    width: 72px;
+
+    .main-nav__text,
+    .main-nav__image {
+      display: none;
+    }
+
+    .main-nav__link {
+      width: 100%;
+      height: 100%;
+      padding-left: 12px;
+    }
+
+    .main-nav__link--active {
+      border: solid 1px rgb(var(--secondary-bg_700));
+    }
+
+    .main-nav__logo {
+      display: block;
+      width: 47px;
+      height: 73px;
+      padding: 0;
+      background-image: url('../../../public/images/icons/camera.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(100);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &, &.main-nav--compact {
+      bottom: 0;
+      width: 100vw;
+      height: 49px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border-right: none;
+      border-top: solid 1px rgb(var(--secondary-bg_700));
+
+      .main-nav__logo {
+        position: absolute;
+        background-image: none;
+        bottom: calc(100vh - 112px);
+      }
+
+      .main-nav__image {
+        display: block;
+      }
+    }
+  }
+}
+
+.main-nav__image {
+  filter: var(--icon-filter);
+}
+
+.main-nav--compact {
+  width: 72px;
+
+  .main-nav__text,
+  .main-nav__image {
+    display: none;
+  }
+
+  .main-nav__link {
+    width: 100%;
+    height: 100%;
+    padding-left: 12px;
+  }
+
+  .main-nav__link--active {
+    border: solid 1px rgb(var(--secondary-bg_700));
+  }
+
+  .main-nav__logo {
+    display: block;
+    width: 47px;
+    height: 73px;
+    padding: 0;
+    background-image: url('../../../public/images/icons/camera.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(100);
+  }
+}
+
+.main-nav__inner {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: calc(100% - 73px);
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+  }
+}
+
+.main-nav__logo {
+  display: flex;
+  align-items: center;
+  padding-top: 28px;
+  padding-right: 12px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+.main-nav__item {
+  height: 56px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  @media screen and (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    .main-nav__item--theme {
+      margin-left: 0;
+      margin-top: 8px;
+    }
+  }
+}
+
+.main-nav__item--search {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    bottom: calc(100vh - 47px);
+    right: 8px;
+  }
+}
+
+.main-nav__item--theme {
+  margin-top: auto;
+
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 52px;
+  border-radius: 24px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  color: rgb(var(--text-color_500));
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(var(--secondary-bg_400));
+
+    &::before {
+      transform: translateY(-50%) scale(105%);
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s cubic-bezier(0.17, 0.17, 0, 1);
+    filter: var(--icon-filter);
+
+    @media screen and (max-width: 767px) {
+      left: 7px;
+    }
+  }
+}
+
+.main-nav__link--active {
+  font-weight: 700;
+}
+
+.main-nav__link--home {
+  &::before {
+    background-image: url('../../../public/images/icons/home.svg');
+  }
+
+  &.main-nav__link--active {
+    &::before {
+      background-image: url('../../../public/images/icons/home-fill.svg');
+    }
+  }
+}
+
+.main-nav__link--search {
+  &::before {
+    background-image: url('../../../public/images/icons/search.svg');
+  }
+
+  &.main-nav__link--active {
+    &::before {
+      background-image: url('../../../public/images/icons/search-fill.svg');
+    }
+  }
+}
+
+.main-nav__link--explore {
+  &::before {
+    background-image: url('../../../public/images/icons/explore.svg');
+  }
+
+  &.main-nav__link--active {
+    &::before {
+      background-image: url('../../../public/images/icons/explore-fill.svg');
+    }
+  }
+}
+
+.main-nav__link--reels {
+  &::before {
+    background-image: url('../../../public/images/icons/reels.svg');
+  }
+
+  &.main-nav__link--active {
+    &::before {
+      background-image: url('../../../public/images/icons/reels-fill.svg');
+    }
+  }
+}
+
+.main-nav__link--messages {
+  &::before {
+    background-image: url('../../../public/images/icons/messages.svg');
+  }
+
+  &.main-nav__link--active {
+    &::before {
+      background-image: url('../../../public/images/icons/messages-fill.svg');
+    }
+  }
+}
+
+.main-nav__link--notifications {
+  &::before {
+    background-image: url('../../../public/images/icons/notifications.svg');
+  }
+
+  &.main-nav__link--active {
+    &::before {
+      background-image: url('../../../public/images/icons/notifications-fill.svg');
+    }
+  }
+}
+
+.main-nav__link--create {
+  &::before {
+    background-image: url('../../../public/images/icons/create.svg');
+  }
+
+  &.main-nav__link--active {
+    &::before {
+      background-image: url('../../../public/images/icons/create-fill.svg');
+    }
+  }
+}
+
+.main-nav__link--profile {
+  &::before {
+    border-radius: 50%;
+    background-image: url('../../../public/images/icons/profile.jpg');
+    background-size: contain;
+  }
+}
+
+.main-nav__link--signout {
+  &::before {
+    background-image: url('../../../public/images/icons/logout.svg');
+    background-size: contain;
+  }
+}

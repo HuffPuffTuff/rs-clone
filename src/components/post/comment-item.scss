@@ -1,0 +1,38 @@
+.comment {
+  display: flex;
+  align-items: flex-start;
+
+  & + & {
+    margin-top: 16px;
+  }
+}
+
+.comment__inner {
+  flex-grow: 1;
+}
+
+.comment__user {
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 1ch;
+}
+
+.comment__action {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.comment__date {
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: rgb(var(--text-color_300));
+}
+
+.comment__delete {
+  width: 24px;
+  height: 24px;
+  -webkit-mask-size: 16px 16px;
+  mask-size: 16px 16px;
+}

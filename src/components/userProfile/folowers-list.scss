@@ -1,0 +1,21 @@
+.folow-modal {
+  padding: 16px 40px;
+  border-radius: 4px;
+  background-color: var(--bg-color_200);
+}
+
+.folow-modal__title {
+  color: rgb(var(--text-color_500));
+}
+
+.folow-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-height: 80vh;
+  overflow-y: auto;
+}

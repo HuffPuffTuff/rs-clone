@@ -1,0 +1,15 @@
+.recomendations__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  & + & {
+    margin-top: 16px;
+  }
+
+  .recomendations-user__image-wrapper,
+  .recomendations-user__image {
+    width: 32px;
+    height: 32px;
+  }
+}

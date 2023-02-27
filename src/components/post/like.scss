@@ -1,0 +1,39 @@
+.like {
+  margin-bottom: 8px;
+}
+
+.like__action {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: -4px;
+  padding: 8px;
+  background-image: url('../../../public/images/icons/notifications.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:not(.like__action--activ) {
+    filter: var(--icon-filter);
+  }
+}
+
+.like__action--activ {
+  background-image: url('../../../public/images/icons/notifications-fill.svg');
+  background-repeat: no-repeat;
+}
+
+.like__first {
+  font-weight: 600;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(var(--text-color_500));
+}
+
+.like__value {
+  font-weight: 600;
+}
